@@ -19,6 +19,12 @@
     --line: .1rem solid var(--color-Grey-light-2);
 }
 
+$bp-largest: 75em;  // 1200 / 16
+$bp-large: 68.75em; // 1100 / 16
+$bp-medium: 56.25em; // 900 / 16
+$bp-small: 37.5em; // 600 / 16
+$bp-smallest: 31.25em; // 500 / 16
+
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +39,10 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%; // 8 / 16 = 0.5
+    }
 }
 
 body {
@@ -43,5 +53,4 @@ body {
     background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
 }
